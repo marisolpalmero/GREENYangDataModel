@@ -13,10 +13,10 @@ The goal is to enable **real-time, vendor-neutral telemetry**, **energy-aware co
 |------|----------|--------|
 | `ietf-energy-core.yang` | Core telemetry metrics (power, energy, voltage, current, temperature). | Derived from EMAN EnergyObject MIB |
 | `ietf-energy-capability.yang` | Static/datasheet information: rated power, supported states, transition times. | Derived from EMAN Context & PowerState |
-| `ietf-energy-collector.yang` | Data collection and sampling configuration (SNMP, RESTCONF, gNMI). | Aligned with POWEFF `collector` module |
+| `ietf-energy-collector.yang` | Data collection and sampling configuration (SNMP, RESTCONF, gNMI). | Aligned with GREEN collector module proposed by Jan to the GREEN WG|
 | `ietf-energy-derived.yang` | Formulas and calculated KPIs (efficiency, PUE, CO₂e). | Derived from POWEFF `derived` metrics |
-| `ietf-energy-policy.yang` | Energy policy definitions for controllers. | With the end goal to introduce Sustainability Policy Defintions: New in GREEN WG framework |
-| `ietf-energy-audit.yang` | Reporting and sustainability compliance information. | New in GREEN WG framework |
+| `ietf-energy-policy.yang` | Energy policy definitions for controllers. | With the end goal to introduce Energy Policy Defintions: New in GREEN WG framework |
+| `ietf-energy-audit.yang` | Reporting and Energy Aware, with extension to Sustainability, compliance information. | New in GREEN WG framework |
 
 ---
 
@@ -30,7 +30,7 @@ These modules follow a modular YANG architecture mapped to real-world entities:
 | **Device** | Measures and reports real-time telemetry. | `ietf-energy-core` |
 | **Component** | Sub-element (port, PSU, fan, CPU). | `ietf-energy-core` |
 | **Controller / Aggregator** | Collects, aggregates, and computes derived metrics. | `ietf-energy-collector`, `ietf-energy-derived` |
-| **Reporter** | Generates sustainability and audit reports. | `ietf-energy-audit` |
+| **Reporter** | Generates energy and audit reports. | `ietf-energy-audit` |
 | **Control / Orchestrator** | Applies power-saving policies, automation. | `ietf-energy-policy` |
 
 ---
