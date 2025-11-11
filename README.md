@@ -70,23 +70,23 @@ This layered model ensures vertical consistency — from hardware to energy awar
 
 ## 5. Alignment with GREEN WG Use Cases
 
-| Use Case (from draft-stephan-green-use-cases) | EMAN Coverage | POWEFF Extension | Required YANG Evolution |
-|-----------------------------------------------|----------------|------------------|--------------------------|
-| **2.1 Energy Monitoring and Measurement** | ✅ MIB-based device energy | ✅ Core + Collector | ✔ YANG Push telemetry |
-| **2.2 Power State Management** | ✅ Full support | ➕ Integration with derived metrics | ✔ YANG RPCs for control |
+| Use Case (from draft-stephan-green-use-cases) | Required YANG Evolution |
+|-----------------------------------------------|--------------------------|
+| **2.1 Energy Monitoring and Measurement** | ✔ YANG Push telemetry |
+| **2.2 Power State Management** | ✔ YANG RPCs for control |
 | **2.3 Energy Efficiency Optimization** | ⚠️ Partial (manual config) | ✅ Derived metrics + policy | ✔ ietf-energy-policy |
-| **2.4 Multi-Device Coordination** | ⚠️ Limited | ✅ Collector-based | ✔ ietf-energy-collector |
-| **2.5 Lifecycle Awareness** | ❌ Missing | ⚠️ Partial (metadata) | ✔ ietf-energy-audit |
-| **2.6 Renewable Energy Usage** | ❌ Missing | ⚠️ To be derived | ✔ ietf-energy-derived |
-| **2.7 Carbon & Environmental Metrics** | ❌ Missing | ✅ Derived scope | ✔ ietf-energy-audit |
-| **2.8 Dynamic Workload Scheduling** | ⚠️ Basic | ✅ Policy-driven | ✔ ietf-energy-policy |
-| **2.9 SLA and Safety Models** | ⚠️ Partial | ✅ Control integration | ✔ ietf-energy-policy |
-| **2.10 Cross-Domain Federation** | ❌ Missing | ✅ Multi-domain collector | ✔ ietf-energy-collector |
-| **2.11 Accuracy and Attestation** | ❌ Missing | ⚠️ Metadata concept | ✔ ietf-energy-capability |
-| **2.12 Reporting and Verification** | ⚠️ Basic | ✅ Audit-level reporting | ✔ ietf-energy-audit |
-| **2.13 Operational Integration** | ⚠️ Partial | ✅ Modular YANG | ✔ all modules |
-| **2.14 SLA & Policy Compliance** | ⚠️ Partial | ✅ Policy/Audit | ✔ ietf-energy-policy |
-| **2.15 Market and Regulatory Alignment** | ❌ Missing | ⚠️ Emerging | ✔ ietf-energy-audit |
+| **2.4 Multi-Device Coordination** | ✔ ietf-energy-collector |
+| **2.5 Lifecycle Awareness** | ✔ ietf-energy-audit |
+| **2.6 Renewable Energy Usage** | ✔ ietf-energy-derived |
+| **2.7 Carbon & Environmental Metrics** | ✔ ietf-energy-audit |
+| **2.8 Dynamic Workload Scheduling** |✔ ietf-energy-policy |
+| **2.9 SLA and Safety Models** | ✔ ietf-energy-policy |
+| **2.10 Cross-Domain Federation** | ✔ ietf-energy-collector |
+| **2.11 Accuracy and Attestation** | ✔ ietf-energy-capability |
+| **2.12 Reporting and Verification** |✔ ietf-energy-audit |
+| **2.13 Operational Integration** | ✔ all modules |
+| **2.14 SLA & Policy Compliance** | ✔ ietf-energy-policy |
+| **2.15 Market and Regulatory Alignment** | ✔ ietf-energy-audit |
 
 ---
 
@@ -125,7 +125,7 @@ Each stage enhances data trust, granularity, and control scope, maintaining a co
 
 ## 9. Conclusion
 
-The combination of **EMAN semantics**, **POWEFF modularity**, and **YANG extensibility** provides a clear pathway to a comprehensive **Green Energy Management Framework** under the IETF GREEN WG.  
+The combination of **EMAN semantics**, **POWEFF modularity**, and **YANG extensibility** provides a clear pathway to a comprehensive **GREEN Framework** under the IETF GREEN WG.  
 
 By implementing this architecture:
 - Real-time, interoperable, and verifiable energy aware metrics become achievable.  
