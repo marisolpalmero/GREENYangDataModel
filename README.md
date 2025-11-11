@@ -94,11 +94,12 @@ This layered model ensures vertical consistency — from hardware to energy awar
 
 | Priority | Module | Key Additions | Status / Notes |
 |-----------|----------|----------------|----------------|
-| 🟢 1 | `ietf-energy-core` | Core energy metrics (power, temp, load, utilization) | Ready for prototype |
-| 🟡 2 | `ietf-energy-capability` | Datasheet and provenance | Draft under review |
-| 🟡 3 | `ietf-energy-derived` | Formulas for efficiency and CO₂e | In design |
-| 🟠 4 | `ietf-energy-policy` | RPCs for policy enforcement | To be defined |
-| 🔵 5 | `ietf-energy-audit` | ESG reporting & compliance linkage | Planned Q1 2026 |
+| 🟢 1 | `ietf-energy-collector` | Based on green-collector proposal | Ready for prototype |
+| 🟢 2 | `ietf-energy-core` | Core energy metrics (power, temp, load, utilization) | EMAN base|
+| 🟡 3 | `ietf-energy-capability` | Datasheet and provenance | POWEFF base |
+| 🟡 4 | `ietf-energy-derived` | Formulas for efficiency and CO₂e | POWEFF based example |
+| 🟠 5 | `ietf-energy-policy` | RPCs for policy enforcement | To be defined |
+| 🔵 6 | `ietf-energy-audit` | ESG reporting & compliance linkage | To be defined |
 
 ---
 
