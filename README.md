@@ -26,7 +26,7 @@ The goal is not only to extend and modernize the **Energy Management (EMAN)** ar
 | Standard / Draft | Description | Key Limitation or Gap |
 |------------------|--------------|------------------------|
 | **EMAN (RFC 7460–7461)** | Defines MIBs for energy objects, contexts, and power states via SNMP. | Device-centric; no support for streaming telemetry, provenance, or lifecycle data. |
-| **POWEFF (draft-opsawg-poweff)** | Introduces modular energy telemetry (embedded / monitored / derived) and collection methods. | Conceptual structure only; no detailed YANG modules or control RPCs. |
+| **POWEFF (draft-opsawg-poweff)** | Introduces modular energy telemetry (embedded / monitored / derived) and collection methods. | Conceptual structure only; no control RPCs. |
 | **GREEN Framework (draft-belmq-green-framework)** | Provides the architecture for energy aware and control as well as data exchange and energy observability. | Requires binding to specific YANG modules for practical implementation. |
 
 ---
