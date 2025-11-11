@@ -1,5 +1,3 @@
----
-
 # Exercise Comparing EMAN, POWEFF, and GREEN Work Items – v00 (Working Document)
 
 **IETF GREEN Working Group**  
