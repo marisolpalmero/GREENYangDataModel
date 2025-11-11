@@ -1,0 +1,30 @@
+module ietf-energy-core {
+  namespace "urn:ietf:params:xml:ns:yang:ietf-energy-core";
+  prefix energy;
+
+  import ietf-yang-types { prefix yang; }
+
+  organization "IETF GREEN Working Group";
+  contact "green@ietf.org";
+  description "Core energy and power telemetry model.";
+
+  container energy-core {
+    list energy-object {
+      key "id";
+      leaf id { type string; description "Unique device/component identifier"; }
+      leaf type { type enumeration { enum device; enum component; } }
+      leaf manufacturer { type string; }
+      leaf model { type string; }
+      leaf serial-number { type string; }
+      container metrics {
+        leaf power-instant { type decimal64 { fraction-digits 3; } units "W"; }
+        leaf energy-total { type decimal64 { fraction-digits 3; } units "Wh"; }
+        leaf voltage { type decimal64 { fraction-digits 2; } units "V"; }
+        leaf current { type decimal64 { fraction-digits 3; } units "A"; }
+        leaf temperature { type decimal64 { fraction-digits 2; } units "°C"; }
+        leaf accuracy { type decimal64 { fraction-digits 2; } units "%"; }
+      }
+      leaf timestamp { type yang:date-and-time; }
+    }
+  }
+}

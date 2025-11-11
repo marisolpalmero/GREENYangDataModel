@@ -1,0 +1,22 @@
+module ietf-energy-policy {
+  namespace "urn:ietf:params:xml:ns:yang:ietf-energy-policy";
+  prefix epol;
+
+  import ietf-energy-core { prefix energy; }
+
+  container energy-policies {
+    list policy {
+      key "id";
+      leaf id { type string; }
+      leaf objective { type enumeration {
+          enum energy-efficiency; enum carbon-intensity; enum cost-saving;
+      }}
+      leaf target { type decimal64 { fraction-digits 2; } units "%"; }
+      leaf trigger-metric { type string; }
+      leaf action { type string; description "e.g. reduce-load, power-down, reallocate"; }
+      leaf scope { type string; description "Device, site, cluster"; }
+      leaf priority { type uint8; }
+      leaf status { type enumeration { enum active; enum disabled; } }
+    }
+  }
+}

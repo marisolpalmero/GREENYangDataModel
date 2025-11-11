@@ -1,0 +1,19 @@
+module ietf-energy-derived {
+  namespace "urn:ietf:params:xml:ns:yang:ietf-energy-derived";
+  prefix eder;
+
+  import ietf-energy-core { prefix energy; }
+
+  container derived-metrics {
+    list derived-metric {
+      key "id";
+      leaf id { type string; }
+      leaf name { type string; }
+      leaf description { type string; }
+      leaf formula { type string; description "Expression referencing monitored metrics"; }
+      leaf unit { type string; }
+      leaf current-value { type decimal64 { fraction-digits 4; } }
+      leaf timestamp { type yang:date-and-time; }
+    }
+  }
+}

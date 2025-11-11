@@ -1,0 +1,27 @@
+module ietf-energy-audit {
+  namespace "urn:ietf:params:xml:ns:yang:ietf-energy-audit";
+  prefix eaud;
+
+  import ietf-energy-derived { prefix eder; }
+
+  container audit-reports {
+    list report {
+      key "report-id";
+      leaf report-id { type string; }
+      leaf reporting-period { type string; }
+      leaf organization { type string; }
+      leaf scope { type string; }
+      container metrics-summary {
+        list metric {
+          key "metric-name";
+          leaf metric-name { type string; }
+          leaf average { type decimal64 { fraction-digits 4; } }
+          leaf total { type decimal64 { fraction-digits 4; } }
+          leaf unit { type string; }
+        }
+      }
+      leaf generated-on { type yang:date-and-time; }
+      leaf signature { type string; description "Digital signature for integrity"; }
+    }
+  }
+}

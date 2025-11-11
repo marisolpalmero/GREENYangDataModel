@@ -1,0 +1,22 @@
+module ietf-energy-collector {
+  namespace "urn:ietf:params:xml:ns:yang:ietf-energy-collector";
+  prefix ecol;
+
+  import ietf-energy-core { prefix energy; }
+
+  container energy-collector {
+    list source {
+      key "source-id";
+      leaf source-id { type string; }
+      leaf source-type { type enumeration { enum device; enum controller; enum site; } }
+      leaf collection-method { type enumeration { enum snmp; enum restconf; enum gnmi; enum local-agent; } }
+      leaf sampling-interval { type uint32; units "seconds"; }
+      leaf accuracy { type decimal64 { fraction-digits 2; } units "%"; }
+      container last-sample {
+        uses energy:energy-core;
+      }
+    }
+    leaf report-destination { type inet:uri; }
+    leaf timestamp { type yang:date-and-time; }
+  }
+}
